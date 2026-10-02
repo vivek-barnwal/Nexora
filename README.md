@@ -82,4 +82,13 @@ This project includes database migrations and an ingestion function under the `s
 
 ## Deployment
 
-The app is structured for a static front-end deployment and can be hosted on services such as GitHub Pages, Vercel, Netlify, or another Vite-compatible platform with the required environment variables configured.
+The app is configured for GitHub Pages deployment through a GitHub Actions workflow. To enable it:
+
+1. Push this repository to GitHub.
+2. Open GitHub repository settings.
+3. Go to Pages and set the source to GitHub Actions.
+4. Add the required secrets in repository settings:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+
+The workflow will automatically build and publish the app on each push to `main`.
